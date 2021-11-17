@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'ARAnalytics-JX'
-  s.version      =  '5.0.1-v2'
+  s.version      =  '5.0.1-v3'
   s.license      =  {:type => 'MIT', :file => 'LICENSE' }
   s.homepage     =  'https://github.com/tospery/ARAnalytics-JX'
   s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
@@ -59,7 +59,8 @@ Pod::Spec.new do |s|
   parseAnalytics_mac = { :spec_name => "ParseAnalyticsOSX", :dependency => "Parse",             :osx => true,  :provider => "ParseAnalytics", :has_extension => true }
 
 
-  all_analytics = [mixpanel, localytics, flurry, google, kissmetrics, crittercism, crashlytics, fabric, bugsnag, countly, helpshift, kissmetrics_mac, mixpanel_mac, tapstream, newRelic, amplitude, hockeyApp, hockeyAppLib, hockeyApp_mac, parseAnalytics, parseAnalytics_mac, heap, chartbeat, umeng, librato, segmentio, swrve, yandex, adjust, appsflyer, branch, snowplow, sentry, intercom, keen, adobe, installtracker, appsee, mobileapptracker, launchkit, firebase, leanplum, appboy]
+  # all_analytics = [mixpanel, localytics, flurry, google, kissmetrics, crittercism, crashlytics, fabric, bugsnag, countly, helpshift, kissmetrics_mac, mixpanel_mac, tapstream, newRelic, amplitude, hockeyApp, hockeyAppLib, hockeyApp_mac, parseAnalytics, parseAnalytics_mac, heap, chartbeat, umeng, librato, segmentio, swrve, yandex, adjust, appsflyer, branch, snowplow, sentry, intercom, keen, adobe, installtracker, appsee, mobileapptracker, launchkit, firebase, leanplum, appboy]
+  all_analytics = [umeng]
 
   # To make the pod spec API cleaner, subspecs are "iOS/KISSmetrics"
 
