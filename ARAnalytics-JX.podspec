@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.source       =  { :git => 'https://github.com/tospery/ARAnalytics-JX.git', :tag => s.version.to_s }
   s.ios.deployment_target = "7.0"
   s.osx.deployment_target = "10.7"
+  s.static_framework = true
   s.social_media_url = "https://twitter.com/tospery"
   s.summary      =  'Using subspecs you can define your analytics provider with the same API on iOS and OS X.'
   # s.description is at the bottom as it is partially generated.
