@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
-  s.name         =  'ARAnalytics'
-  s.version      =  '5.0.1'
+  s.name         =  'ARAnalytics-JX'
+  s.version      =  '5.0.1-v1'
   s.license      =  {:type => 'MIT', :file => 'LICENSE' }
-  s.homepage     =  'https://github.com/orta/ARAnalytics'
-  s.authors      =  { 'orta' => 'orta.therox@gmail.com', 'Daniel Haight' => "confidence.designed@gmail.com" }
-  s.source       =  { :git => 'https://github.com/orta/ARAnalytics.git', :tag => s.version.to_s }
+  s.homepage     =  'https://github.com/tospery/ARAnalytics-JX'
+  s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
+  s.source       =  { :git => 'https://github.com/tospery/ARAnalytics-JX.git', :tag => s.version.to_s }
   s.ios.deployment_target = "7.0"
   s.osx.deployment_target = "10.7"
-  s.social_media_url = "https://twitter.com/orta"
+  s.social_media_url = "https://twitter.com/tospery"
   s.summary      =  'Using subspecs you can define your analytics provider with the same API on iOS and OS X.'
   # s.description is at the bottom as it is partially generated.
 
