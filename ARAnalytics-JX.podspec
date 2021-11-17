@@ -58,8 +58,6 @@ Pod::Spec.new do |s|
   hockeyApp_mac   = { :spec_name => "HockeyAppOSX",    :dependency => "HockeySDK-Mac",          :osx => true,  :provider => "HockeyAppOSX"}
   parseAnalytics_mac = { :spec_name => "ParseAnalyticsOSX", :dependency => "Parse",             :osx => true,  :provider => "ParseAnalytics", :has_extension => true }
 
-
-  # all_analytics = [mixpanel, localytics, flurry, google, kissmetrics, crittercism, crashlytics, fabric, bugsnag, countly, helpshift, kissmetrics_mac, mixpanel_mac, tapstream, newRelic, amplitude, hockeyApp, hockeyAppLib, hockeyApp_mac, parseAnalytics, parseAnalytics_mac, heap, chartbeat, umeng, librato, segmentio, swrve, yandex, adjust, appsflyer, branch, snowplow, sentry, intercom, keen, adobe, installtracker, appsee, mobileapptracker, launchkit, firebase, leanplum, appboy]
   all_analytics = [umeng]
 
   # To make the pod spec API cleaner, subspecs are "iOS/KISSmetrics"
@@ -76,12 +74,6 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'ARNavigationControllerDelegateProxy.h'
     ss.tvos.deployment_target = '9.0'
 	  ss.ios.deployment_target = '8.0'
-  end
-
-  s.subspec "DSL" do |ss|
-    ss.source_files = ['ARDSL.{h,m}']
-    ss.dependency 'RSSwizzle', '~> 0.1.0'
-    ss.dependency 'ReactiveObjC', '~> 2.0'
   end
 
   # for the description
