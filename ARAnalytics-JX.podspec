@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'ARAnalytics-JX'
-  s.version      =  '5.0.1-v1'
+  s.version      =  '5.0.1-v2'
   s.license      =  {:type => 'MIT', :file => 'LICENSE' }
   s.homepage     =  'https://github.com/tospery/ARAnalytics-JX'
   s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
@@ -108,13 +108,13 @@ Pod::Spec.new do |s|
       # only add the files for the osx / iOS version
       if analytics_spec[:osx]
         ss.osx.source_files = sources
-        ss.dependency 'ARAnalytics/CoreMac'
+        ss.dependency 'ARAnalytics-JX/CoreMac'
         ss.platform = :osx
         all_osx_names << providername
 
       else
         ss.ios.source_files = sources
-        ss.dependency 'ARAnalytics/CoreIOS'
+        ss.dependency 'ARAnalytics-JX/CoreIOS'
         if analytics_spec[:tvos]
           ss.tvos.source_files = sources
           ss.ios.deployment_target = "6.0"
@@ -153,12 +153,12 @@ Pod::Spec.new do |s|
     s.subspec "no_clash_#{keep_subspec[:spec_name]}" do |ss|
       non_clash.each do |analytics_spec|
         if analytics_spec[:osx]
-          ss.osx.dependency "ARAnalytics/#{analytics_spec[:spec_name]}"
+          ss.osx.dependency "ARAnalytics-JX/#{analytics_spec[:spec_name]}"
         else
           if analytics_spec[:tvos]
-            ss.tvos.dependency "ARAnalytics/#{analytics_spec[:spec_name]}"
+            ss.tvos.dependency "ARAnalytics-JX/#{analytics_spec[:spec_name]}"
           end
-          ss.ios.dependency "ARAnalytics/#{analytics_spec[:spec_name]}"
+          ss.ios.dependency "ARAnalytics-JX/#{analytics_spec[:spec_name]}"
         end
       end
     end
@@ -172,6 +172,6 @@ Pod::Spec.new do |s|
 
   ios_spec_names = all_ios_names[0...-1].join(", ") + " and " + all_ios_names[-1]
   osx_spec_names = all_osx_names[0...-1].join(", ") + " and " + all_osx_names[-1]
-  s.description  =  "ARAnalytics is a analytics abstraction library offering a sane API for tracking events and user data. It currently supports on iOS: #{ ios_spec_names }. And for OS X: #{ osx_spec_names }. It does this by using CocoaPods subspecs to let you decide which libraries you'd like to use. You are free to also use the official API for any provider too. Also, comes with an amazing DSL to clear up your methods."
+  s.description  =  "ARAnalytics-JX is a analytics abstraction library offering a sane API for tracking events and user data. It currently supports on iOS: #{ ios_spec_names }. And for OS X: #{ osx_spec_names }. It does this by using CocoaPods subspecs to let you decide which libraries you'd like to use. You are free to also use the official API for any provider too. Also, comes with an amazing DSL to clear up your methods."
 
 end
