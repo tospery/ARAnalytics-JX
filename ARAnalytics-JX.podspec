@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   parseAnalytics   = { :spec_name => "ParseAnalytics",      :dependency => "Parse",                 :has_extension => true }
   heap             = { :spec_name => "HeapAnalytics",       :dependency => "Heap" }
   chartbeat        = { :spec_name => "Chartbeat",           :dependency => "Chartbeat",             :has_extension => true }
-  umeng            = { :spec_name => "UMengAnalytics",      :dependency => "UMengAnalytics" }
+  umeng            = { :spec_name => "UMengAnalytics",      :dependency => "UMCommon" }
   segmentio        = { :spec_name => "Segmentio",           :dependency => [["Analytics", ">= 3"]], :tvos => true}
   swrve            = { :spec_name => "Swrve",               :dependency => "SwrveSDK" }
   yandex           = { :spec_name => "YandexMobileMetrica", :dependency => "YandexMobileMetrica" }
