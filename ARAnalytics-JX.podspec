@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
   s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
   s.source       =  { :git => 'https://github.com/tospery/ARAnalytics-JX.git', :tag => s.version.to_s }
   s.ios.deployment_target = "11.0"
-  s.osx.deployment_target = "10.15"
   s.static_framework = true
   s.social_media_url = "https://twitter.com/tospery"
   s.summary      =  'Using subspecs you can define your analytics provider with the same API on iOS and OS X.'
@@ -17,12 +16,6 @@ Pod::Spec.new do |s|
   all_analytics = [umeng]
 
   # To make the pod spec API cleaner, subspecs are "iOS/KISSmetrics"
-
-  s.subspec "CoreMac" do |ss|
-    ss.source_files = ['*.{h,m}', 'Providers/ARAnalyticalProvider.{h,m}', 'Providers/ARAnalyticsProviders.h']
-    ss.exclude_files = ['ARDSL.{h,m}', 'ARNavigationControllerDelegateProxy.{h,m}']
-    ss.platform = :osx
-  end
 
   s.subspec "CoreIOS" do |ss|
     ss.source_files = ['*.{h,m}', 'Providers/ARAnalyticalProvider.{h,m}', 'Providers/ARAnalyticsProviders.h']
