@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         =  'ARAnalytics-JX'
-  s.version      =  '5.0.1-v5'
+  s.version      =  '5.0.1-v7'
   s.license      =  {:type => 'MIT', :file => 'LICENSE' }
   s.homepage     =  'https://github.com/tospery/ARAnalytics-JX'
   s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
   s.source       =  { :git => 'https://github.com/tospery/ARAnalytics-JX.git', :tag => s.version.to_s }
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "11.0"
   s.osx.deployment_target = "10.7"
   s.static_framework = true
   s.social_media_url = "https://twitter.com/tospery"
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.subspec "DSL" do |ss|
     ss.source_files = ['ARDSL.{h,m}']
     ss.dependency 'RSSwizzle', '~> 0.1.0'
-    ss.dependency 'ReactiveObjC', '2.0.0'
+    ss.dependency 'ReactiveObjC', '~> 2.0'
   end
 
   # for the description
