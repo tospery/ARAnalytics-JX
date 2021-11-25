@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         =  'ARAnalytics-JX'
-  s.version      =  '5.0.1-v7'
+  s.version      =  '5.0.1-v1'
   s.license      =  {:type => 'MIT', :file => 'LICENSE' }
   s.homepage     =  'https://github.com/tospery/ARAnalytics-JX'
   s.authors      =  { 'YangJianxiang' => 'tospery@gmail.com' }
   s.source       =  { :git => 'https://github.com/tospery/ARAnalytics-JX.git', :tag => s.version.to_s }
   s.ios.deployment_target = "11.0"
-  s.osx.deployment_target = "10.7"
+  s.osx.deployment_target = "10.15"
   s.static_framework = true
   s.social_media_url = "https://twitter.com/tospery"
   s.summary      =  'Using subspecs you can define your analytics provider with the same API on iOS and OS X.'
