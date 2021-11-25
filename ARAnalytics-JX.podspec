@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.subspec "DSL" do |ss|
     ss.source_files = ['ARDSL.{h,m}']
     ss.dependency 'RSSwizzle', '~> 0.1.0'
-    ss.dependency 'ReactiveObjC', '~> 2.0'
+    ss.dependency 'ReactiveObjC', '2.0.0'
   end
 
   # for the description
