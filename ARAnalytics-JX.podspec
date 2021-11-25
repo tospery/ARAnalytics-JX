@@ -32,12 +32,6 @@ Pod::Spec.new do |s|
 	  ss.ios.deployment_target = '8.0'
   end
 
-  s.subspec "DSL" do |ss|
-    ss.source_files = ['ARDSL.{h,m}']
-    ss.dependency 'RSSwizzle', '~> 0.1.0'
-    ss.dependency 'ReactiveObjC', '~> 2.0'
-  end
-
   # for the description
   all_ios_names = []
   all_osx_names = []
